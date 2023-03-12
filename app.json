@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "rise",
+    "slug": "rise",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
