@@ -29,6 +29,32 @@ To use Introduction Slider in your app, follow these simple steps:
 
 4. Call the startSlider() method to start the introduction slider.
 
+```
+public class IntroSliderActivity extends AppCompatActivity implements OnSlideCompleteListener {
+
+    private IntroductionSlider introductionSlider;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_intro_slider);
+
+        introductionSlider = new IntroductionSlider(this)
+                .addSlide(R.layout.slide_one)
+                .addSlide(R.layout.slide_two)
+                .addSlide(R.layout.slide_three)
+                .addOnSlideCompleteListener(this);
+
+        introductionSlider.startSlider();
+    }
+
+    @Override
+    public void onSlideComplete() {
+        // Do something when the last slide is completed
+    }
+}
+```
+
 ## Customization
 Introduction Slider is highly customizable. You can customize the appearance and behavior of the slides by using the various methods provided by the IntroductionSlider class. Here are some of the customization options available:
 
